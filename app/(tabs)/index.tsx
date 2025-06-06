@@ -1,10 +1,16 @@
 import { colors } from "@/components/Colors";
 import PanelCuadro from "@/components/PanelCuadro";
-import { StyleSheet, ScrollView } from "react-native";
+import { StyleSheet, ScrollView, Text } from "react-native";
 
 export default function Panel() {
   return (
     <ScrollView style={styles.container}>
+      <Text className="text-3xl text-white font-bold tracking-tight mb-2">
+        ¡Bienvenido de vuelta, Aventurero!
+      </Text>
+      <Text className="text-xl text-muted-foreground mb-4">
+        Aquí tienes un resumen de tu progreso en la misión de productividad.
+      </Text>
       <PanelCuadro
         title="Misones Completadas"
         value="24/30"
@@ -37,8 +43,9 @@ export default function Panel() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.dark.background.hex,
+    backgroundColor: colors.dark.background,
     flex: 1,
     gap: 20,
+    padding: 10,
   },
 });

@@ -24,32 +24,38 @@ export default function PanelCuadro({
         }}
       >
         <Text style={styles.title}>{title}</Text>
-        <MaterialCommunityIcons name={icon} color="white" size={24} />
+        <MaterialCommunityIcons name={icon} color={colors.primary} size={24} />
       </View>
       <Text style={styles.values}>{value}</Text>
-      <Progress.Bar progress={barValue} color={"white"} width={340} />
+      <Progress.Bar
+        progress={barValue}
+        color={"rgba(156,108,234,1)"}
+        width={340}
+        borderWidth={0}
+        unfilledColor={"rgba(24,24,27,1)"}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.dark.background.hex,
+    backgroundColor: colors.dark.muted,
     flex: 1,
-    gap: 20,
-    borderColor: colors.dark.foreground.hex,
+    rowGap: 10,
+    borderColor: colors.dark.accent,
     borderWidth: 2,
     borderRadius: 20,
     marginBottom: 20,
     padding: 20,
   },
   title: {
-    fontWeight: "bold",
-    fontSize: 20,
-    color: colors.dark.foreground.hex,
+    fontWeight: "500",
+    fontSize: 15,
+    color: colors.dark.text,
   },
   values: {
     fontSize: 30,
-    color: colors.dark.foreground.hex,
+    color: colors.dark.text,
   },
 });

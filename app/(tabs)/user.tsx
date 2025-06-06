@@ -1,13 +1,29 @@
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import {
+  Pressable,
+  Text,
+  View,
+  StyleSheet,
+  useColorScheme,
+} from "react-native";
 import { Image } from "expo-image";
 import { colors } from "@/components/Colors";
 import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "@/context/ThemeContext";
 
 const userImage = require("@/assets/images/usuario.webp");
 
 export default function User() {
+  const theme = useColorScheme();
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor:
+            theme === "dark" ? colors.dark.background : colors.light.background,
+        },
+      ]}
+    >
       <View style={styles.imageContainer}>
         <Image source={userImage} style={styles.image} />
       </View>
@@ -21,7 +37,7 @@ export default function User() {
           justifyContent: "center",
           flexDirection: "row",
           columnGap: 10,
-          borderColor: colors.dark.muted.hex,
+          borderColor: colors.dark.muted,
           borderWidth: 2,
           paddingHorizontal: 50,
           paddingVertical: 10,
@@ -37,7 +53,6 @@ export default function User() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.dark.background.hex,
     flex: 1,
     gap: 20,
     padding: 20,

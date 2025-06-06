@@ -51,17 +51,17 @@ export default function Logros() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.dark.background.hex,
+    backgroundColor: colors.dark.background,
     flex: 1,
     gap: 20,
   },
   title: {
     fontWeight: "bold",
     fontSize: 20,
-    color: colors.dark.foreground.hex,
+    color: colors.primary,
   },
   values: {
     fontSize: 30,
-    color: colors.dark.foreground.hex,
+    color: colors.dark.text,
   },
 });

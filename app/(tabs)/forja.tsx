@@ -87,14 +87,14 @@ export default function Forja() {
               alignItems: "center",
               justifyContent: "center",
               paddingHorizontal: 50,
-              backgroundColor: colors.dark.muted.hex,
+              backgroundColor: colors.dark.muted,
               borderRadius: 8,
             }}
           />
           <Pressable
             onPress={resetTimer}
             style={{
-              backgroundColor: colors.dark.primary.hex,
+              backgroundColor: colors.primary,
               justifyContent: "center",
               alignItems: "center",
               width: 100,
@@ -112,7 +112,7 @@ export default function Forja() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.dark.background.hex,
+    backgroundColor: colors.dark.background,
     flex: 1,
     gap: 20,
     justifyContent: "center",
@@ -122,10 +122,10 @@ const styles = StyleSheet.create({
   timer: {
     fontWeight: "bold",
     fontSize: 80,
-    color: colors.dark.foreground.hex,
+    color: colors.dark.text,
   },
   playButton: {
-    backgroundColor: colors.dark.primary.hex,
+    backgroundColor: colors.dark.text,
     width: 300,
     height: 50,
     alignItems: "center",
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     columnGap: 20,
     borderRadius: 16,
-    borderColor: colors.dark.muted.hex,
+    borderColor: colors.dark.muted,
     borderWidth: 2,
   },
 });
